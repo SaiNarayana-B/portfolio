@@ -28,12 +28,13 @@ export const experiences: Experience[] = [
     location: "Bengaluru, India",
     period: "Jul 2025 - Present",
     highlights: [
-      "Architected an internal AI agent platform using Google ADK and MCP servers to standardize tool integration, data access, and orchestration for enterprise AI automation systems.",
-      "Developed TEX Agent, a multi-agent staffing recommendation system using RAG pipelines over 2 years of historical SOW data; implemented dynamic parallel orchestration reducing runtime by 95% — from 45 minutes to 5-7 minutes.",
-      "Developed a conversational NL2SQL agent for the QAssure platform translating natural language queries into BigQuery SQL via a BigQuery MCP server.",
-      "Ran implicit vs. explicit caching POC; restructured all agent and orchestrator system prompts — reducing inference cost by over 80% across production agent runs.",
-      "Built Cypher, a developer tool that captures AI interaction logs from GitHub Copilot, Kiro, and Claude Code; uses LLM-based analysis to evaluate prompt quality and calculate effort-saved karma scores.",
-      "Implemented dynamic LLM routing and token tracing to select appropriate models by task complexity, improving latency and reducing inference cost.",
+      "Built a multi-agent staffing system (TEX Agent) using Google ADK that dynamically spawns parallel agents for each required role and returns top candidate recommendations with fit rationale.",
+      "Reduced pipeline runtime by 95% (45 min → 5 min) by replacing sequential role processing with dynamic parallel orchestration.",
+      "Built a conversational NL2SQL agent that lets PMs and business leads query project health data in plain English, converts it to BigQuery SQL via an MCP server.",
+      "Ran implicit vs. explicit caching POC and restructured all agent system prompts, cutting daily inference cost from $4,000 to $2,500 (37% reduction).",
+      "Set up dynamic LLM routing to pick cheaper/faster models based on task complexity, reducing inference cost across production agents.",
+      "Built Cypher, a developer tool that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
+      "Audited and improved Codeaira (internal AI coding assistant) by benchmarking against open-source tools, rewriting system prompts, and adding slash-command based skill invocation.",
     ],
   },
   {
@@ -42,9 +43,9 @@ export const experiences: Experience[] = [
     location: "Bengaluru, India",
     period: "Jan 2025 - Jun 2025",
     highlights: [
-      "Built the AI Canvas Agent, enabling GTM teams to generate workshop-ready solution documentation by mapping stakeholders, business impact, and ROI.",
-      "Developed the Rapid Pitch Agent, an AI agent that researches target companies and analyzes financials, AI/ML initiatives, and competitive landscape to generate strategic pitch insights.",
-      "Implemented Google ADK framework and developed MCP servers and tools for integrating enterprise data sources with AI agents across 3 internal pilot projects.",
+      "Built the AI Canvas Agent that generates solution docs and slide decks for GTM teams by mapping stakeholders, business impact, and ROI from a single project brief.",
+      "Built the Rapid Pitch Agent that researches a target company's financials, AI/ML initiatives, and competitors, then produces a ready-to-use pitch deck for pre-sales teams.",
+      "Implemented Google ADK framework and built MCP servers to connect enterprise data sources with AI agents across 3 internal pilot projects.",
     ],
   },
 ];
@@ -73,10 +74,10 @@ export const projects: Project[] = [
   {
     name: "TEX Agent",
     description:
-      "Multi-agent staffing recommendation system using Google ADK with RAG pipelines over 2 years of historical SOW data. Dynamic parallel orchestration with fan-out/fan-in pattern for any number of roles simultaneously.",
+      "Multi-agent staffing system using Google ADK that takes a project ID or role description, dynamically spawns parallel agents for each required role, and returns top candidate recommendations with fit rationale.",
     tech: ["Google ADK", "RAG", "Vertex AI", "BigQuery", "Python"],
     links: [],
-    highlight: "95% runtime reduction — 45 minutes down to 5-7 minutes.",
+    highlight: "95% runtime reduction — 45 min down to 5 min via dynamic parallel orchestration.",
   },
   {
     name: "NL2SQL Agent",
@@ -90,16 +91,16 @@ export const projects: Project[] = [
   {
     name: "Cypher",
     description:
-      "Developer tool that captures AI interaction logs from GitHub Copilot, Kiro, and Claude Code. Uses LLM-based analysis to evaluate prompt quality and calculate effort-saved karma scores.",
-    tech: ["TypeScript", "VS Code Extension", "LLM", "Analytics"],
+      "Developer tool that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
+    tech: ["Python", "LLM", "Analytics"],
     links: [],
     highlight:
       "Quantifies developer productivity gains from AI-assisted coding.",
   },
   {
-    name: "Codeaira CLI & VS Code Extension",
+    name: "Codeaira — Internal AI Coding Assistant",
     description:
-      "Overhauled an internal AI coding assistant: optimized system prompts, added new tools, invokable slash commands for skills, and extended discoverability to .github, .claude, .agents folders.",
+      "Audited and improved the internal AI coding assistant (CLI + VS Code extension) by benchmarking against open-source tools, rewriting system prompts, and adding slash-command based skill invocation.",
     tech: ["TypeScript", "VS Code API", "LLM", "CLI", "Node.js"],
     links: [],
     highlight:
@@ -108,20 +109,20 @@ export const projects: Project[] = [
   {
     name: "SoW Summarization Pipeline",
     description:
-      "End-to-end pipeline covering Google Drive ingestion, LLM-powered summarization, vector indexing, and GCS storage. Also built REST APIs for LLM Wiki sync to keep internal knowledge bases current.",
+      "Ingestion pipeline that pulls SoW documents from Google Drive, summarizes them via LLM, and indexes into a vector store for the staffing agent's RAG retrieval.",
     tech: ["Python", "LLM", "Vector DB", "GCS", "FastAPI"],
     links: [],
     highlight:
       "Powers the knowledge base used by production AI agents.",
   },
   {
-    name: "LLM Caching POC",
+    name: "LLM Caching & Cost Optimization",
     description:
-      "Ran implicit vs. explicit caching POC; restructured all agent and orchestrator system prompts to place stable content at the start for implicit cache hits, and explicitly cached large system prompts.",
+      "Ran implicit vs. explicit caching POC and restructured all agent system prompts. Set up dynamic LLM routing to pick cheaper/faster models based on task complexity.",
     tech: ["Python", "Vertex AI", "Prompt Engineering", "Caching"],
     links: [],
     highlight:
-      "Reduced inference cost by over 80% across production agent runs.",
+      "Cut daily inference cost from $4,000 to $2,500 (37% reduction).",
   },
 ];
 
@@ -184,17 +185,17 @@ export const certifications = [
   {
     name: "Google Cloud Professional Machine Learning Engineer",
     issuer: "Google Cloud",
-    credlyUrl: "https://www.credly.com/badges/67700c4a-0d9e-4541-a207-04ce5cdc9b08/public_url",
+    credlyUrl: "https://www.credly.com/badges/45d56da1-4f31-4a20-8e6e-58a8c726600a/public_url",
   },
   {
     name: "Google Cloud Associate Cloud Engineer",
     issuer: "Google Cloud",
-    credlyUrl: "https://www.credly.com/badges/45d56da1-4f31-4a20-8e6e-58a8c726600a/public_url",
+    credlyUrl: "https://www.credly.com/badges/f8ad1ba5-e2c4-4946-afed-0c52f53937c6/public_url",
   },
   {
     name: "Google Cloud Generative AI Leader",
     issuer: "Google Cloud",
-    credlyUrl: "https://www.credly.com/badges/f8ad1ba5-e2c4-4946-afed-0c52f53937c6/public_url",
+    credlyUrl: "https://www.credly.com/badges/67700c4a-0d9e-4541-a207-04ce5cdc9b08/public_url",
   },
   {
     name: "Machine Learning Specialization",
