@@ -34,8 +34,10 @@ export const experiences: Experience[] = [
       "Built a conversational NL2SQL agent that lets PMs and business leads query project health data in plain English, converts it to BigQuery SQL via an MCP server.",
       "Ran implicit vs. explicit caching POC and restructured all agent system prompts, cutting daily inference cost from $4,000 to $2,500 (37% reduction).",
       "Set up dynamic LLM routing across Gemini and Claude model families to pick cheaper/faster models based on task complexity, reducing inference cost across production agents.",
-      "Built Cypher, a developer tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
+      "Built REST APIs to sync the internal knowledge base (LLM Wiki) with GCS, keeping the documents used by production AI agents up to date.",
+      "Delivered a client demo where AI agents generated specs, built a multi-service backend with frontend, tested, and deployed it end-to-end using spec-driven development; presented to KeyBank stakeholders.",
       "Audited and improved Codeaira (internal AI coding assistant) by benchmarking against open-source tools, rewriting system prompts, and adding slash-command based skill invocation.",
+      "Built Cypher, a developer tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
     ],
   },
   {
@@ -83,7 +85,7 @@ export const projects: Project[] = [
   {
     name: "NL2SQL Agent",
     description:
-      "Conversational agent for the QAssure platform that translates natural language queries into BigQuery SQL via a BigQuery MCP server with schema-aware prompting and output summarization.",
+      "Conversational NL2SQL agent that lets PMs and business leads query project health data in plain English, converts it to BigQuery SQL via an MCP server, and returns summarized results.",
     tech: ["MCP", "BigQuery", "NL2SQL", "Python", "FastAPI"],
     links: [],
     highlight:
@@ -92,11 +94,11 @@ export const projects: Project[] = [
   {
     name: "Cypher",
     description:
-      "Developer tool that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
+      "Developer tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
     tech: ["Python", "LLM", "Analytics"],
     links: [],
     highlight:
-      "Quantifies developer productivity gains from AI-assisted coding.",
+      "Used by 2,000+ employees. Quantifies developer productivity gains from AI-assisted coding.",
   },
   {
     name: "Codeaira — Internal AI Coding Assistant",
@@ -110,16 +112,16 @@ export const projects: Project[] = [
   {
     name: "SoW Summarization Pipeline",
     description:
-      "Ingestion pipeline that pulls SoW documents from Google Drive, summarizes them via LLM, and indexes into a vector store for the staffing agent's RAG retrieval.",
-    tech: ["Python", "LLM", "Vector DB", "GCS", "FastAPI"],
+      "Ingestion pipeline that pulls 2,000+ project documents from Google Drive, summarizes them via LLM, and indexes into Vertex AI Vector Search for the staffing agent's RAG retrieval.",
+    tech: ["Python", "LLM", "Vertex AI Vector Search", "GCS", "FastAPI"],
     links: [],
     highlight:
-      "Powers the knowledge base used by production AI agents.",
+      "Processes 2,000+ project documents. Powers the knowledge base used by production AI agents.",
   },
   {
     name: "LLM Caching & Cost Optimization",
     description:
-      "Ran implicit vs. explicit caching POC and restructured all agent system prompts. Set up dynamic LLM routing to pick cheaper/faster models based on task complexity.",
+      "Ran implicit vs. explicit caching POC and restructured all agent system prompts. Set up dynamic LLM routing across Gemini and Claude model families to pick cheaper/faster models based on task complexity.",
     tech: ["Python", "Vertex AI", "Prompt Engineering", "Caching"],
     links: [],
     highlight:
