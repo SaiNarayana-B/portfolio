@@ -54,7 +54,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/sai-narayana-resume.pdf"
+            href="/Sai_Narayana_B_GenAI_Engineer_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-4 py-1.5 border border-[var(--accent)] text-[var(--accent-light)] rounded-md hover:bg-[var(--accent-glow)] transition-all duration-200"
@@ -107,7 +107,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/sai-narayana-resume.pdf"
+                href="/Sai_Narayana_B_GenAI_Engineer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm px-4 py-2 border border-[var(--accent)] text-[var(--accent-light)] rounded-md text-center hover:bg-[var(--accent-glow)] transition-all duration-200"
