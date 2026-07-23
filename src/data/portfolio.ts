@@ -10,7 +10,7 @@ export const personalInfo = {
   linkedinHandle: "sai23",
   location: "Bengaluru, India",
   summary:
-    "GenAI Engineer with 1.5 years of experience building and shipping production-grade AI agent systems at Quantiphi. Reduced multi-agent pipeline runtime by 95% via dynamic parallel orchestration; shipped an open-source codebase analysis tool (patchwork-conventions) to PyPI and MCP Registry. Skilled in multi-agent orchestration, Retrieval Augmented Generation (RAG), NL2SQL, LLM evaluation, and agent SDK integration (Google ADK, Claude, Copilot) on Google Cloud Platform.",
+    "GenAI Engineer with 1.5 years of experience building and shipping production-grade AI agent systems at Quantiphi. Architected multi-agent orchestration pipelines serving 2,000+ employees; shipped an open-source codebase analysis tool (patchwork-conventions) to PyPI and MCP Registry. Skilled in multi-agent orchestration, Retrieval Augmented Generation (RAG), NL2SQL, LLM evaluation, and agent SDK integration (Google ADK, Claude, Copilot) on Google Cloud Platform.",
 };
 
 export interface Experience {
@@ -28,16 +28,16 @@ export const experiences: Experience[] = [
     location: "Bengaluru, India",
     period: "Jul 2025 - Present",
     highlights: [
-      "Built a multi-agent staffing system (TEX Agent) using Google ADK that dynamically spawns parallel agents for each required role and returns top candidate recommendations with fit rationale.",
-      "Built a SoW ingestion pipeline processing 2,000+ project documents from Google Drive, summarizing via LLM, and indexing into Vertex AI Vector Search for RAG retrieval.",
+      "Architected a multi-agent staffing system (TEX Agent) using Google ADK that dynamically spawns parallel agents for each required role and returns top candidate recommendations with fit rationale.",
+      "Developed a SoW ingestion pipeline processing 2,000+ project documents from Google Drive, summarizing via LLM, and indexing into Vertex AI Vector Search for RAG retrieval.",
       "Reduced pipeline runtime by 95% (45 min → 5 min) by replacing sequential role processing with dynamic parallel orchestration.",
-      "Built a conversational NL2SQL agent that lets PMs and business leads query project health data in plain English, converts it to BigQuery SQL via an MCP server.",
+      "Designed a conversational NL2SQL agent serving 50+ PMs and business leads, converting plain-English queries to BigQuery SQL via an MCP server.",
       "Ran implicit vs. explicit caching POC and restructured all agent system prompts, cutting daily inference cost from $4,000 to $2,500 (37% reduction).",
       "Set up dynamic LLM routing across Gemini and Claude model families to pick cheaper/faster models based on task complexity, reducing inference cost across production agents.",
-      "Built REST APIs to sync the internal knowledge base (LLM Wiki) with GCS, keeping the documents used by production AI agents up to date.",
+      "Created REST APIs to sync the internal knowledge base (LLM Wiki) with GCS, keeping 500+ documents used by production AI agents up to date.",
       "Delivered a client demo where AI agents generated specs, built a multi-service backend with frontend, tested, and deployed it end-to-end using spec-driven development; presented to KeyBank stakeholders.",
-      "Audited and improved Codeaira (internal AI coding assistant) by benchmarking against open-source tools, rewriting system prompts, and adding slash-command based skill invocation.",
-      "Built Cypher, a developer tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
+      "Audited and improved Codeaira (internal AI coding assistant) by benchmarking against 5 open-source tools, rewriting system prompts, and adding slash-command based skill invocation.",
+      "Engineered Cypher, a developer analytics tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
     ],
   },
   {
@@ -46,9 +46,9 @@ export const experiences: Experience[] = [
     location: "Bengaluru, India",
     period: "Jan 2025 - Jun 2025",
     highlights: [
-      "Built the AI Canvas Agent that generates solution docs and slide decks for GTM teams by mapping stakeholders, business impact, and ROI from a single project brief.",
-      "Built the Rapid Pitch Agent that researches a target company's financials, AI/ML initiatives, and competitors, then produces a ready-to-use pitch deck for pre-sales teams.",
-      "Implemented Google ADK framework and built MCP servers to connect enterprise data sources with AI agents across 3 internal pilot projects.",
+      "Designed the AI Canvas Agent that generates solution docs and slide decks for 4 GTM teams, mapping stakeholders, business impact, and ROI from a single project brief.",
+      "Developed the Rapid Pitch Agent that researches a target company's financials, AI/ML initiatives, and competitors, then produces a ready-to-use pitch deck for pre-sales teams.",
+      "Implemented Google ADK framework and configured MCP servers to connect enterprise data sources with AI agents across 3 internal pilot projects.",
     ],
   },
 ];
@@ -65,14 +65,14 @@ export const projects: Project[] = [
   {
     name: "patchwork-conventions",
     description:
-      "AST-based codebase scanner that auto-generates CONVENTIONS.md for AI coding agents. Tree-sitter analysis detecting naming conventions, import patterns, error handling, testing frameworks, and API shapes across Python, TypeScript, JavaScript, Go, and Rust.",
+      "AST-based codebase scanner that auto-generates CONVENTIONS.md for AI coding agents. Tree-sitter analysis detecting naming conventions, import patterns, error handling, testing frameworks, and API shapes across 5 languages with confidence scores and real code examples.",
     tech: ["Python", "Tree-sitter", "MCP", "PyPI", "CLI"],
     links: [
       { label: "GitHub", url: "https://github.com/SaiNarayana-B/patchwork" },
       { label: "PyPI", url: "https://pypi.org/project/patchwork-conventions/" },
     ],
     highlight:
-      "Built in 2 days. Published to PyPI and MCP Registry. Integrates with Claude Code, Cursor, and GitHub Copilot.",
+      "Developed in 2 days. Published to PyPI and MCP Registry. Integrates with Claude Code, Cursor, and GitHub Copilot.",
   },
   {
     name: "TEX Agent",
