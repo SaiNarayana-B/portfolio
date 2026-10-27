@@ -79,13 +79,13 @@ export const projects: Project[] = [
       { label: "PyPI", url: "https://pypi.org/project/patchwork-conventions/" },
     ],
     highlight:
-      "Developed in 2 days. Published to PyPI and MCP Registry. Integrates with Claude Code, Cursor, and GitHub Copilot.",
+      "Published to PyPI and MCP Registry. Integrates with Claude Code, Cursor, and GitHub Copilot.",
   },
   {
     name: "TEX Agent",
     description:
-      "Multi-agent staffing system using Google ADK that takes a project ID or role description, dynamically spawns parallel agents for each required role, and returns top candidate recommendations with fit rationale.",
-    tech: ["Google ADK", "RAG", "Vertex AI", "BigQuery", "Python"],
+      "Multi-agent staffing system using Google ADK that takes a project ID or role description, spawns parallel agents for each required role, and returns top candidate recommendations with fit rationale. Backed by an ingestion pipeline that pulls 2,000+ project documents from Google Drive, summarises them via LLM, and indexes them into Vertex AI Vector Search for RAG retrieval.",
+    tech: ["Google ADK", "RAG", "Vertex AI Vector Search", "BigQuery", "Python"],
     links: [],
     highlight: "95% runtime reduction — 45 min down to 5 min via dynamic parallel orchestration.",
   },
@@ -115,15 +115,6 @@ export const projects: Project[] = [
     links: [],
     highlight:
       "Internal developer tool used across engineering teams at Quantiphi.",
-  },
-  {
-    name: "SoW Summarization Pipeline",
-    description:
-      "Ingestion pipeline that pulls 2,000+ project documents from Google Drive, summarizes them via LLM, and indexes into Vertex AI Vector Search for the staffing agent's RAG retrieval.",
-    tech: ["Python", "LLM", "Vertex AI Vector Search", "GCS", "FastAPI"],
-    links: [],
-    highlight:
-      "Processes 2,000+ project documents. Powers the knowledge base used by production AI agents.",
   },
   {
     name: "LLM Caching & Cost Optimization",
