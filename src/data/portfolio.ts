@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Sai Narayana B",
-  title: "GenAI Engineer",
-  tagline: "Building production-grade AI agent systems",
+  title: "Applied AI Engineer",
+  tagline: "Taking LLM systems from prototype to production",
   email: "sainarayana2311@gmail.com",
   phone: "+91 8248881924",
   github: "https://github.com/SaiNarayana-B",
@@ -10,7 +10,7 @@ export const personalInfo = {
   linkedinHandle: "sai23",
   location: "Bengaluru, India",
   summary:
-    "GenAI Engineer with 1.5 years of experience building and shipping production-grade AI agent systems at Quantiphi. Architected multi-agent orchestration pipelines serving 2,000+ employees; shipped an open-source codebase analysis tool (patchwork-conventions) to PyPI and MCP Registry. Skilled in multi-agent orchestration, Retrieval Augmented Generation (RAG), NL2SQL, LLM evaluation, and agent SDK integration (Google ADK, Claude, Copilot) on Google Cloud Platform.",
+    "Applied AI Engineer with close to 2 years at Quantiphi taking LLM systems from prototype to production on Google Cloud. Works across the full loop: agents and tool integrations, the evaluation and usage analytics that show whether they work, and the cost and latency engineering that keeps them viable at scale. As a Forward Deployed Engineer, embedded with a client team and used self-built spec-driven development harnesses to deliver a project scoped for 15 people with 6, in 50 of 90 planned days.",
 };
 
 export interface Experience {
@@ -28,16 +28,14 @@ export const experiences: Experience[] = [
     location: "Bengaluru, India",
     period: "Jul 2025 - Present",
     highlights: [
-      "Architected a multi-agent staffing system (TEX Agent) using Google ADK that dynamically spawns parallel agents for each required role and returns top candidate recommendations with fit rationale.",
-      "Developed a SoW ingestion pipeline processing 2,000+ project documents from Google Drive, summarizing via LLM, and indexing into Vertex AI Vector Search for RAG retrieval.",
-      "Reduced pipeline runtime by 95% (45 min → 5 min) by replacing sequential role processing with dynamic parallel orchestration.",
-      "Designed a conversational NL2SQL agent serving 50+ PMs and business leads, converting plain-English queries to BigQuery SQL via an MCP server.",
-      "Ran implicit vs. explicit caching POC and restructured all agent system prompts, cutting daily inference cost from $4,000 to $2,500 (37% reduction).",
-      "Set up dynamic LLM routing across Gemini and Claude model families to pick cheaper/faster models based on task complexity, reducing inference cost across production agents.",
-      "Created REST APIs to sync the internal knowledge base (LLM Wiki) with GCS, keeping 500+ documents used by production AI agents up to date.",
-      "Delivered a client demo where AI agents generated specs, built a multi-service backend with frontend, tested, and deployed it end-to-end using spec-driven development; presented to KeyBank stakeholders.",
-      "Audited and improved Codeaira (internal AI coding assistant) by benchmarking against 5 open-source tools, rewriting system prompts, and adding slash-command based skill invocation.",
-      "Engineered Cypher, a developer analytics tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
+      "Built spec-driven development (SDD) harnesses: agent workflows that take requirements to specs, code, tests, and deployment.",
+      "Embedded as one of two Forward Deployed Engineers with a global academic publisher's developers to build a research paper recommendation system using the harnesses. Delivered with 6 people against a planned 15-person team, in 50 days against a 90-day plan.",
+      "Built Cypher scripts that run on developers' machines to capture AI interaction logs from Copilot, Kiro, and Claude Code across 2,000+ employees, scoring prompt quality and effort saved.",
+      "Built a Cypher endpoint on the company's LLM gateway that analyses every request from the Codeaira web app and Claude Code, categorises and rates each interaction, and classifies work as SDD or non-SDD. Ran it on flex inference and used a shadow deployment to compare two models on live traffic.",
+      "Built TEX Agent, a multi-agent system on Google ADK that spawns parallel agents per role and returns ranked candidates, using RAG over 2,000+ documents in Vertex AI Vector Search. Cut runtime by 95% (45 min to 5 min).",
+      "Built a conversational NL2SQL agent used by 50+ PMs and business leads that turns plain-English questions into BigQuery SQL through an MCP server.",
+      "Cut daily inference cost from $4,000 to $2,500 (37%) with prompt caching and model routing across Gemini and Claude.",
+      "Benchmarked the internal coding assistant against 5 open-source agents, then rewrote its system prompts and added slash-command skills.",
     ],
   },
   {
@@ -62,6 +60,15 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    name: "Spec-Driven Development Harnesses",
+    description:
+      "Agent workflows that take requirements to specs, code, tests, and deployment, with the spec as the source of truth. Used as a Forward Deployed Engineer embedded with a client's developers to build a research paper recommendation system.",
+    tech: ["Claude Code", "Coding Agents", "Spec-Driven Development", "Python"],
+    links: [],
+    highlight:
+      "Delivered with 6 people against a planned 15-person team, in 50 days against a 90-day plan.",
+  },
   {
     name: "patchwork-conventions",
     description:
@@ -94,11 +101,11 @@ export const projects: Project[] = [
   {
     name: "Cypher",
     description:
-      "Developer tool used by 2,000+ employees that captures AI interaction logs from Copilot, Kiro, and Claude Code, scores prompt quality using LLM analysis, and calculates effort-saved metrics per developer.",
-    tech: ["Python", "LLM", "Analytics"],
+      "AI usage analytics in two parts: scripts on developers' machines that capture interaction logs from Copilot, Kiro, and Claude Code, and an LLM gateway endpoint that analyses every Codeaira web app and Claude Code request, rates it, and classifies work as SDD or non-SDD.",
+    tech: ["Python", "LLM Gateway", "Flex Inference", "Shadow Deployment"],
     links: [],
     highlight:
-      "Used by 2,000+ employees. Quantifies developer productivity gains from AI-assisted coding.",
+      "Covers 2,000+ employees. Shadow deployment compared two models on live traffic before choosing one.",
   },
   {
     name: "Codeaira — Internal AI Coding Assistant",
@@ -185,6 +192,11 @@ export const skills = {
 };
 
 export const certifications = [
+  {
+    name: "Claude Certified Developer (Foundations) — Score 985/1000",
+    issuer: "Anthropic",
+    credlyUrl: "https://www.credly.com/badges/8a87f2f0-b7a9-44bd-aba3-441badc600eb/public_url",
+  },
   {
     name: "Google Cloud Professional Machine Learning Engineer",
     issuer: "Google Cloud",

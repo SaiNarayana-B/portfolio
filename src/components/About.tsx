@@ -16,9 +16,9 @@ export default function About() {
           <div>
             <p className="text-[var(--text-secondary)] leading-relaxed mb-4 text-base">
               I work at the intersection of large language models and production engineering.
-              At Quantiphi, I&apos;ve built multi-agent systems that cut pipeline runtimes by 95%,
-              shipped NL2SQL agents for enterprise platforms, and optimized inference costs by 80%
-              through prompt restructuring and caching strategies.
+              At Quantiphi, I&apos;ve built spec-driven development harnesses that let a 6-person team
+              deliver a project scoped for 15, LLM usage analytics across our LLM gateway, multi-agent
+              systems that cut pipeline runtimes by 95%, and caching and routing that cut inference cost by 37%.
             </p>
             <p className="text-[var(--text-secondary)] leading-relaxed mb-6 text-base">
               Outside work, I ship open source — my tool{" "}
@@ -44,7 +44,7 @@ export default function About() {
           {/* Quick stats */}
           <div className="flex md:flex-col gap-6 md:gap-4 md:pl-8 md:border-l md:border-[var(--border)]">
             <div>
-              <p className="text-2xl font-bold text-[var(--accent-light)]">1.5+</p>
+              <p className="text-2xl font-bold text-[var(--accent-light)]">~2</p>
               <p className="text-xs text-[var(--text-muted)] mt-0.5">Years Experience</p>
             </div>
             <div>
@@ -52,7 +52,7 @@ export default function About() {
               <p className="text-xs text-[var(--text-muted)] mt-0.5">Runtime Reduction</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-[var(--accent-light)]">4</p>
+              <p className="text-2xl font-bold text-[var(--accent-light)]">5</p>
               <p className="text-xs text-[var(--text-muted)] mt-0.5">Certifications</p>
             </div>
           </div>

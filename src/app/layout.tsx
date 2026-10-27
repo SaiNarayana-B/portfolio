@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sai Narayana B — GenAI Engineer",
+  title: "Sai Narayana B — Applied AI Engineer",
   description:
-    "GenAI Engineer building production-grade AI agent systems. Multi-agent orchestration, RAG pipelines, and open-source tools.",
+    "Applied AI Engineer taking LLM systems from prototype to production. Agents, evaluation, LLM cost engineering, and open-source tools.",
   openGraph: {
-    title: "Sai Narayana B — GenAI Engineer",
+    title: "Sai Narayana B — Applied AI Engineer",
     description:
-      "GenAI Engineer building production-grade AI agent systems.",
+      "Applied AI Engineer taking LLM systems from prototype to production.",
     type: "website",
   },
 };
