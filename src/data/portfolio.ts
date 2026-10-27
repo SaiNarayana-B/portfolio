@@ -198,9 +198,9 @@ export const certifications = [
     credlyUrl: "https://www.credly.com/badges/8a87f2f0-b7a9-44bd-aba3-441badc600eb/public_url",
   },
   {
-    name: "Forward Deployed Engineer Cohort: Gemini Enterprise Agent Platform (4-day workshop)",
+    name: "Gemini Enterprise Forward Deployed Engineer Bootcamp",
     issuer: "Google Cloud",
-    credlyUrl: "",
+    credlyUrl: "https://www.credly.com/badges/fab96f94-b05a-4974-8dda-7a991671dfaa/public_url",
   },
   {
     name: "Google Cloud Professional Machine Learning Engineer",
