@@ -10,7 +10,7 @@ export const personalInfo = {
   linkedinHandle: "sai23",
   location: "Bengaluru, India",
   summary:
-    "Applied AI Engineer with close to 2 years at Quantiphi taking LLM systems from prototype to production on Google Cloud. Works across the full loop: agents and tool integrations, the evaluation and usage analytics that show whether they work, and the cost and latency engineering that keeps them viable at scale. As a Forward Deployed Engineer, embedded with a client team and used self-built spec-driven development harnesses to deliver a project scoped for 15 people with 6, in 50 of 90 planned days.",
+    "Applied AI Engineer with close to 2 years at Quantiphi taking LLM systems from prototype to production. Works across the full loop: agents and tool integrations, the evaluation and usage analytics that show whether they work, and the cost and latency engineering that keeps them viable at scale. As a Forward Deployed Engineer, embedded with a client team and used self-built spec-driven development harnesses to deliver a project scoped for 15 people with 6, in 50 of 90 planned days.",
 };
 
 export interface Experience {
@@ -193,9 +193,14 @@ export const skills = {
 
 export const certifications = [
   {
-    name: "Claude Certified Developer (Foundations) — Score 985/1000",
+    name: "Claude Certified Developer (Foundations)",
     issuer: "Anthropic",
     credlyUrl: "https://www.credly.com/badges/8a87f2f0-b7a9-44bd-aba3-441badc600eb/public_url",
+  },
+  {
+    name: "Forward Deployed Engineer Cohort: Gemini Enterprise Agent Platform (4-day workshop)",
+    issuer: "Google Cloud",
+    credlyUrl: "",
   },
   {
     name: "Google Cloud Professional Machine Learning Engineer",

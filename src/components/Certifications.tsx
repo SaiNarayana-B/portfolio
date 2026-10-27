@@ -26,9 +26,9 @@ export default function Certifications() {
               {certifications.map((cert, i) => (
                 <motion.a
                   key={cert.name}
-                  href={cert.credlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={cert.credlyUrl || undefined}
+                  target={cert.credlyUrl ? "_blank" : undefined}
+                  rel={cert.credlyUrl ? "noopener noreferrer" : undefined}
                   initial={{ opacity: 0, x: -15 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
